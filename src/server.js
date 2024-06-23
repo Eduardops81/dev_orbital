@@ -49,3 +49,27 @@ app.get('/users', async (req, res) => {
         res.status(500).send(error);
     }
 })
+
+app.post('/users', async (req, res) => {
+    const {nome, email, mensagem} = req.body;
+
+    if(!nome || !email || !mensagem){
+        res.status(422).send('Você deve enviar nome, email e mensagem');
+        return;
+    }
+
+    const user = {
+        nome,
+        email,
+        mensagem
+    };
+
+    try {
+        await User.create(user);
+        res.status(201).send('Usuario cadastrado!');
+
+    } catch (error) {
+        res.status(500).send(error);
+    };
+
+});
