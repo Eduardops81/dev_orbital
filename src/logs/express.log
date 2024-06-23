@@ -16,3 +16,220 @@ Request: GET / at Sun Jun 23 2024 02:05:32 GMT-0400, IP: ::ffff:127.0.0.1, User 
 Response Body:
 Hello World
 Response: 200 0.363 ms 
+
+Request: POST /users at Sun Jun 23 2024 18:43:45 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Request Body:
+{
+	"nome": "eduardo",
+	"email": "eduardopaessout@gmail.com",
+	"mensagem": "Olá mundo!"
+}
+Response: 404 0.820 ms 
+
+Request: POST /users at Sun Jun 23 2024 18:45:54 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Request Body:
+{
+	"nome": "eduardo",
+	"email": "eduardopaessout@gmail.com",
+	"mensagem": "Olá mundo!"
+}
+Response: 404 0.262 ms 
+
+Request: POST /users at Sun Jun 23 2024 18:50:14 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Request Body:
+{
+	"nome": "eduardo",
+	"email": "eduardopaessout@gmail.com",
+	"mensagem": "Olá mundo!"
+}
+Response Body:
+{
+	"message": "Usuario cadastrado!"
+}
+Response: 201 25.439 ms 
+
+Request: POST /users at Sun Jun 23 2024 18:50:20 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Request Body:
+{
+	"nome": "eduardo",
+	"email": "eduardopaessout@gmail.com",
+	"mensage": "Olá mundo!"
+}
+Response Body:
+{
+	"message": "Usuario cadastrado!"
+}
+Response: 201 19.016 ms 
+
+Request: POST /users at Sun Jun 23 2024 18:52:30 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Request Body:
+{
+	"nome": "eduardo",
+	"email": "eduardopaessout@gmail.com",
+	"mensage": "Olá mundo!"
+}
+Response Body:
+{
+	"error": "Você deve enviar nome, email e mensagem"
+}
+Response: 422 1.231 ms 
+
+Request: POST /users at Sun Jun 23 2024 18:54:16 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Request Body:
+{
+	"nome": "eduardo",
+	"email": "eduardopaessout@gmail.com",
+	"mensagem": "Olá mundo!"
+}
+Response Body:
+{
+	"message": "Usuario cadastrado!"
+}
+Response: 201 21.865 ms 
+
+Request: GET /users at Sun Jun 23 2024 18:59:26 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Response Body:
+[
+	{
+		"_id": "6678a6a62244db1a95bedcbb",
+		"nome": "eduardo",
+		"email": "eduardopaessout@gmail.com",
+		"mensagem": "Olá mundo!",
+		"__v": 0
+	},
+	{
+		"_id": "6678a798306299ad54edbcbf",
+		"nome": "eduardo",
+		"email": "eduardopaessout@gmail.com",
+		"mensagem": "Olá mundo!",
+		"__v": 0
+	}
+]
+Response: 200 22.066 ms 
+
+Request: POST /users at Sun Jun 23 2024 19:07:16 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Request Body:
+{
+	"nome": "eduardo",
+	"email": "eduardopaessout@gmail.com",
+	"mensagem": "Olá mundo!"
+}
+Response Body:
+Usuario cadastrado!
+Response: 201 25.720 ms 
+
+Request: GET /users at Sun Jun 23 2024 19:07:21 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Response Body:
+[
+	{
+		"_id": "6678a6a62244db1a95bedcbb",
+		"nome": "eduardo",
+		"email": "eduardopaessout@gmail.com",
+		"mensagem": "Olá mundo!",
+		"__v": 0
+	},
+	{
+		"_id": "6678a798306299ad54edbcbf",
+		"nome": "eduardo",
+		"email": "eduardopaessout@gmail.com",
+		"mensagem": "Olá mundo!",
+		"__v": 0
+	},
+	{
+		"_id": "6678aaa44802fd9e41a970c3",
+		"nome": "eduardo",
+		"email": "eduardopaessout@gmail.com",
+		"mensagem": "Olá mundo!",
+		"__v": 0
+	}
+]
+Response: 200 13.815 ms 
+
+Request: POST /users at Sun Jun 23 2024 19:07:35 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Request Body:
+{
+	"nome": "eduardo",
+	"email": "eduardopaessout@gmail.com",
+	"mensaem": "Olá mundo!"
+}
+Response Body:
+Você deve enviar nome, email e mensagem
+Response: 422 0.192 ms 
+
+Request: PUT /users/6678a6a62244db1a95bedcbb at Sun Jun 23 2024 19:10:17 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Request Body:
+{
+	"nome": "eduardo",
+	"email": "eduardopaessout@gmail.com",
+	"mensaem": "Atualizando a mensagem!"
+}
+Response Body:
+Você deve enviar nome, email e mensagem
+Response: 422 0.396 ms 
+
+Request: PUT /users/6678a6a62244db1a95bedcbb at Sun Jun 23 2024 19:10:23 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Request Body:
+{
+	"nome": "eduardo",
+	"email": "eduardopaessout@gmail.com",
+	"mensagem": "Atualizando a mensagem!"
+}
+Response Body:
+{
+	"nome": "eduardo",
+	"email": "eduardopaessout@gmail.com",
+	"mensagem": "Atualizando a mensagem!"
+}
+Response: 200 25.025 ms 
+
+Request: GET /users at Sun Jun 23 2024 19:10:28 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Response Body:
+[
+	{
+		"_id": "6678a6a62244db1a95bedcbb",
+		"nome": "eduardo",
+		"email": "eduardopaessout@gmail.com",
+		"mensagem": "Atualizando a mensagem!",
+		"__v": 0
+	},
+	{
+		"_id": "6678a798306299ad54edbcbf",
+		"nome": "eduardo",
+		"email": "eduardopaessout@gmail.com",
+		"mensagem": "Olá mundo!",
+		"__v": 0
+	},
+	{
+		"_id": "6678aaa44802fd9e41a970c3",
+		"nome": "eduardo",
+		"email": "eduardopaessout@gmail.com",
+		"mensagem": "Olá mundo!",
+		"__v": 0
+	}
+]
+Response: 200 12.865 ms 
+
+Request: DELETE /users/6678a6a62244db1a95bedcbb at Sun Jun 23 2024 19:13:59 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Response Body:
+Usuário removido com sucesso!
+Response: 200 35.661 ms 
+
+Request: GET /users at Sun Jun 23 2024 19:14:05 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Response Body:
+[
+	{
+		"_id": "6678a798306299ad54edbcbf",
+		"nome": "eduardo",
+		"email": "eduardopaessout@gmail.com",
+		"mensagem": "Olá mundo!",
+		"__v": 0
+	},
+	{
+		"_id": "6678aaa44802fd9e41a970c3",
+		"nome": "eduardo",
+		"email": "eduardopaessout@gmail.com",
+		"mensagem": "Olá mundo!",
+		"__v": 0
+	}
+]
+Response: 200 12.522 ms 

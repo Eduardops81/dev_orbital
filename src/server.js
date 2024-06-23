@@ -6,6 +6,10 @@ const morganBody = require('morgan-body');
 const fs = require('fs');
 const path = require('path');
 
+const User = require('../models/User');
+const mongoose = require('mongoose');
+require('dotenv').config();
+
 app.use(bodyParser.json());
 
 const log = fs.createWriteStream(
