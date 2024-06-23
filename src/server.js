@@ -103,3 +103,22 @@ app.put('/users/:id', async (req, res) => {
         res.status(500).send(error);
     }
 });
+
+app.delete('/users/:id', async (req, res) => {
+    const id = req.params.id;
+  
+    const user = await User.findOne({ _id: id });
+  
+    if (!user) {
+      res.status(422).send('Usuário não encontrado!');
+      return;
+    }
+  
+    try {
+      await User.deleteOne({ _id: id });
+      res.status(200).send('Usuário removido com sucesso!');
+
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
