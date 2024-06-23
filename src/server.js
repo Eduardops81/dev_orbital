@@ -73,3 +73,33 @@ app.post('/users', async (req, res) => {
     };
 
 });
+
+app.put('/users/:id', async (req, res) => {
+    const id = req.params.id;
+  
+    const {nome, email, mensagem} = req.body;
+  
+    const user = {
+        nome,
+        email,
+        mensagem
+    };
+
+    if(!nome || !email || !mensagem){
+        res.status(422).send('Você deve enviar nome, email e mensagem');
+        return;
+    }
+  
+    try {
+        const updatedUser = await User.updateOne({ _id: id }, user);
+  
+        if (updatedUser.matchedCount === 0) {
+            res.status(422).send('O úsuario não foi localizado!');
+            return;
+        }
+  
+        res.status(200).json(user);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
