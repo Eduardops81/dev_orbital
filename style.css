@@ -102,3 +102,30 @@ p {
     margin-bottom: 10px;
     word-wrap: break-word;
 }
+
+@media (max-width: 600px){
+    header {
+        font-size: 10px;
+        height: 60px;
+    }
+
+    .container {
+        width: 300px;
+        height: 500px;
+    }
+
+    input, textarea {
+        width: 200px;
+        height: 10px;
+    }
+
+    .send_button {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .status {
+        width: 250px;
+        font-size: 14px;
+    }
+}
