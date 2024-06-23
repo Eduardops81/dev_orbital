@@ -32,3 +32,20 @@ app.get('/', (req, res) => {
 app.post('/devorbital', (req, res) => {
     res.send(req.body)
 })
+
+//CRUD
+
+const DATABASE_USER = process.env.DATABASE_USER
+const DATABASE_PASS = encodeURIComponent(process.env.DATABASE_PASS)
+
+mongoose.connect(`mongodb+srv://${DATABASE_USER}:${DATABASE_PASS}@cluster0.ghqr5ik.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
+
+app.get('/users', async (req, res) => {
+    try {
+        const user = await User.find();
+        res.status(200).json(user);
+
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
