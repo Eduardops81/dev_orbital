@@ -87,3 +87,18 @@ input, textarea {
     height: 80px;
     margin-bottom: 20px;
 }
+
+.status {
+    background-color: var(--grey-background);;
+    flex: 1;
+    width: 350px;
+    border-radius: 10px;
+    border: 1px solid var(--grey-border-color);
+    padding: 10px;
+    overflow: auto;
+}
+
+p {
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
