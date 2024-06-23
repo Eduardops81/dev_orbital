@@ -1,0 +1,18 @@
+
+Request: POST /devorbital at Sun Jun 23 2024 02:05:27 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Request Body:
+{
+	"nome": "eduardo",
+	"idade": 23
+}
+Response Body:
+{
+	"nome": "eduardo",
+	"idade": 23
+}
+Response: 200 1.587 ms 
+
+Request: GET / at Sun Jun 23 2024 02:05:32 GMT-0400, IP: ::ffff:127.0.0.1, User Agent: insomnia/9.2.0
+Response Body:
+Hello World
+Response: 200 0.363 ms 
