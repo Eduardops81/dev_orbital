@@ -36,3 +36,54 @@ header {
     align-items: center;
     justify-content: center;
 }
+
+.container {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px var(--shadow-color);
+    background-color: var(--white-background);
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 3;
+    line-height: 40px;
+}
+
+input, textarea {
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid var(--grey-border-color);
+    padding: 10px;
+}
+
+.send_button {
+    width: 300px;
+    border-radius: 10px;
+    height: 30px;
+    border: 1px solid transparent;
+    background-color: var(--blue-background);
+    color: var(--white-background);
+    cursor: pointer
+}
+
+.send_button:hover {
+    background-color: var(--dark-blue-background);
+}
+
+#ctt_name, #ctt_email {
+    height: 30px;
+}
+
+#ctt_msg {
+    height: 80px;
+    margin-bottom: 20px;
+}
