@@ -8,6 +8,15 @@ const path = require('path');
 
 app.use(bodyParser.json());
 
+const log = fs.createWriteStream(
+    path.join(__dirname, './logs', 'express.log'), { flags: 'a'}
+);
+
+morganBody(app, {
+    noColors: true,
+    stream: log
+});
+
 app.listen(port, () => {
     console.log(`Rodando na porta ${port}`)
 })
